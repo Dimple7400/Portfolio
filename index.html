@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Portfolio | Dark Theme</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0ea5e9',
+                        secondary: '#7e22ce',
+                        dark: '#0f172a',
+                        darker: '#020617',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark text-slate-200">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-darker/80 backdrop-blur-sm z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold gradient-text">Portfolio</a>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-slate-200 hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-2">
+                <a href="#home" class="block py-2 nav-link active">Home</a>
+                <a href="#about" class="block py-2 nav-link">About</a>
+                <a href="#skills" class="block py-2 nav-link">Skills</a>
+                <a href="#projects" class="block py-2 nav-link">Projects</a>
+                <a href="#contact" class="block py-2 nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4" data-aos="fade-right">Hi, I'm <span class="gradient-text " data-aos="fade-right">Dimple</span></h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-slate-300" id="dimple" data-aos="fade-right"></h2>
+                <p class="text-lg mb-8 text-slate-400 max-w-lg" data-aos="fade-right">
+                    I craft fast, accessible, and beautiful websites & web apps. 
+                    Let's build something amazing together.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="px-6 py-3 rounded-full btn-primary font-medium" data-aos="fade-right">Hire Me</a>
+                    <a href="#projects" data-aos="fade-right"  class="px-6 py-3 rounded-full border border-primary text-primary font-medium hover:bg-primary/10 transition">View Work</a>
+                </div>
+                <div class="flex mt-8 space-x-4">
+                    <a href="https://github.com/Dimple7400/" data-aos="fade-right"  target="_blank" class="social-icon text-xl w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-primary">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/dimple-falak-70b04b2a7/" data-aos="fade-right"  target="_blank" class="social-icon text-xl w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-blue-600">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" target="_blank" data-aos="fade-right" class="social-icon text-xl w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-blue-400">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#"  target="_blank" data-aos="fade-right" class="social-icon text-xl w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-pink-600">
+                        <i class="fab fa-dribbble"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+                    <div class="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-secondary blur-xl opacity-20"></div>
+                    <img src="Images/dimplee.jfif" 
+                         alt="Profile" 
+                         class="relative w-full h-full object-cover rounded-full border-4 border-slate-800 floating">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-darker">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-bottom">About <span class="gradient-text" data-aos="fade-bottom">Me</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <div class="relative w-64 h-64">
+                        <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary to-secondary blur-xl opacity-20"></div>
+                        <img src="Images/dimplee.jfif" 
+                             alt="About"
+                             class="relative w-full h-full object-cover rounded-2xl border-4 border-slate-800">
+                    </div>
+                </div>
+                
+                <div class="md:w-2/3 md:pl-12">
+                    <h3 class="text-2xl font-bold mb-6" data-aos="fade-right">Who am I?</h3>
+                    <p class="text-slate-400 mb-6" data-aos="fade-right">
+                        I am a passionate Full Stack Developer skilled in crafting modern websites and web applications using HTML, CSS , JavaScript , Bootstrap, Python, Django and MySQL.
+                         I focus on building clean, responsive, and high-performing solutions.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div>
+                            <h4 class="font-semibold mb-2" data-aos="fade-right">Name: <span class="text-slate-300" data-aos="fade-right">Dimple Falak</span></h4>
+                            <h4 class="font-semibold mb-2" data-aos="fade-right">Email: <span class="text-slate-300" data-aos="fade-right">dimplefalak621@gmail.com</span></h4>
+                            <h4 class="font-semibold mb-2" data-aos="fade-right">Phone: <span class="text-slate-300" data-aos="fade-right">+91 7400904711</span></h4>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold mb-2" data-aos="fade-right">Age: <span class="text-slate-300" data-aos="fade-right">21</span></h4>
+                            <h4 class="font-semibold mb-2" data-aos="fade-right">Experience: <span class="text-slate-300" data-aos="fade-right">1 Years</span></h4>
+                            <h4 class="font-semibold mb-2" data-aos="fade-right">Location: <span class="text-slate-300" data-aos="fade-right">Indore (M.P.)</span></h4>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-4">
+                        <a href="Images/DimpleFalak_Resume-1.pdf" data-aos="fade-right" download class="px-6 py-3 rounded-full btn-primary font-medium" >Download CV</a>
+                        <a href="#contact" data-aos="fade-right" class="px-6 py-3 rounded-full border border-primary text-primary font-medium hover:bg-primary/10 transition" >Contact Me</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Experience Timeline -->
+            <div class="mt-20">
+                <h3 class="text-2xl font-bold mb-8 text-center">My <span class="gradient-text" data-aos="fade-bottom">Experience</span></h3>
+                
+                <div class="relative max-w-3xl mx-auto">
+                    <div class="absolute left-1/2 h-full w-0.5 bg-slate-700 transform -translate-x-1/2"></div>
+                    
+                    <div class="mb-8 flex justify-between items-center w-full timeline-item">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="order-1 w-5/12 px-4 py-4 bg-slate-800 rounded-lg shadow-lg" data-aos="fade-right">
+                            <h4 class="text-lg font-bold mb-2">Frontend Developer</h4>
+                            <p class="text-sm text-slate-400 mb-2">IT Geeks Private Limited • 2025</p>
+                            <p class="text-slate-300">
+                                Build responsive web applications using HTML5, CSS3 and JavaScript. 
+                                Improved performance by 40% through code optimization.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-8 flex justify-between items-center w-full timeline-item">
+                        <div class="order-1 w-5/12 px-4 py-4 bg-slate-800 rounded-lg shadow-lg" data-aos="fade-right">
+                            <h4 class="text-lg font-bold mb-2">Full Stack Developer</h4>
+                            <p class="text-sm text-slate-400 mb-2">Projection Private Limited • 2024 - 2025</p>
+                            <p class="text-slate-300">
+                                Developed full-stack applications with Python, Django. 
+                                Implemented RESTful APIs and integrated third-party services.
+                            </p>
+                        </div>
+                        <div class="order-1 w-5/12"></div>
+                    </div>
+                    
+                    <!-- <div class="mb-8 flex justify-between items-center w-full timeline-item">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="order-1 w-5/12 px-4 py-4 bg-slate-800 rounded-lg shadow-lg">
+                            <h4 class="text-lg font-bold mb-2">Junior Web Developer</h4>
+                            <p class="text-sm text-slate-400 mb-2">StartUp Ventures • 2017 - 2019</p>
+                            <p class="text-slate-300">
+                                Built responsive websites using HTML, CSS, and JavaScript. 
+                                Collaborated with designers to implement UI/UX improvements.
+                            </p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-bottom">My <span class="gradient-text" data-aos="fade-bottom">Skills</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6" data-aos="fade-bottom">Technical Skills</h3>
+                    
+                    <div class="space-y-6">
+                        <div data-aos="fade-bottom">
+                            <div class="flex justify-between mb-2" data-aos="fade-bottom">
+                                <span class="font-medium" data-aos="fade-bottom">HTML/CSS</span>
+                                <span data-aos="fade-bottom">100%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2" data-aos="fade-bottom">
+                                <span class="font-medium">JavaScript</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar" data-aos="fade-bottom">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2" data-aos="fade-bottom">
+                                <span class="font-medium">Django</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar" data-aos="fade-bottom">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2" data-aos="fade-bottom">
+                                <span class="font-medium">Python</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar" data-aos="fade-bottom">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-6" data-aos="fade-bottom">Professional Skills</h3>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2" data-aos="fade-bottom">
+                                <span class="font-medium">Communication</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar" data-aos="fade-bottom">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2" data-aos="fade-bottom">
+                                <span class="font-medium">Teamwork</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar" data-aos="fade-bottom">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2" data-aos="fade-bottom">
+                                <span class="font-medium">Problem Solving</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar" data-aos="fade-bottom">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div class="flex justify-between mb-2" data-aos="fade-bottom">
+                                <span class="font-medium">Creativity</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar" data-aos="fade-bottom">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tools & Technologies -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold mb-8 text-center" data-aos="fade-bottom">Tools & <span class="gradient-text" data-aos="fade-bottom">Technologies</span></h3>
+                
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover" data-aos="fade-bottom">
+                        <i class="fab fa-html5 text-4xl text-orange-500 mb-2"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover" data-aos="fade-bottom">
+                        <i class="fab fa-css3-alt text-4xl text-blue-500 mb-2"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover" data-aos="fade-bottom">
+                        <i class="fab fa-js text-4xl text-yellow-400 mb-2"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover" data-aos="fade-bottom">
+                        <i class="fa-brands fa-python text-4xl text-blue-400 mb-2"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover" data-aos="fade-bottom">
+                        <i class="fab fa-node-js text-4xl text-green-500 mb-2"></i>
+                        <span>Django</span>
+                    </div>
+                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover" data-aos="fade-bottom">
+                        <i class="fas fa-database text-4xl text-blue-300 mb-2"></i>
+                        <span>MySQL</span>
+                    </div>
+                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover" data-aos="fade-bottom">
+                        <i class="fa-brands fa-bootstrap text-4xl text-purple-500 mb-2"></i>
+                        <span>Bootstrap5</span>
+                    </div>
+                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover" data-aos="fade-bottom">
+                        <i class="fab fa-git-alt text-4xl text-orange-600 mb-2"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover" data-aos="fade-bottom">
+                        <i class="fa-brands fa-github text-4xl text-pink-500 mb-2"></i>
+                        <span>Github</span>
+                    </div>
+                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover" data-aos="fade-bottom">
+                        <i class="fab fa-figma text-4xl text-purple-500 mb-2"></i>
+                        <span>Figma</span>
+                    </div>
+                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover" data-aos="fade-bottom">
+                        <i class="fas fa-terminal text-4xl text-gray-300 mb-2"></i>
+                        <span>VS Code</span>
+                    </div>
+                    <div class="flex flex-col items-center p-6 bg-slate-800 rounded-lg card-hover" data-aos="fade-bottom">
+                        <i class="fab fa-linux text-4xl text-white mb-2"></i>
+                        <span>PyCharm</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-darker">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-aos="fade-bottom">My <span class="gradient-text" data-aos="fade-bottom">Projects</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card rounded-xl overflow-hidden card-hover" data-aos="flip-up">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Images/caterserv.png"
+                             alt="Project 1" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Cater Serv</h3>
+                        <p class="text-slate-400 mb-4">
+                            Responsive CaterServe website with smooth navigation and service showcase.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">HTML5</span>
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">CSS3</span>
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">Bootstrap5</span>
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">JavaScript</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://dimple7400.github.io/CaterServ/" target="_blank" class="text-primary hover:text-secondary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/Dimple7400/CaterServ.git" class="text-primary hover:text-secondary">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card rounded-xl overflow-hidden card-hover" data-aos="flip-up">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Images/FINDER.png" 
+                             alt="Project 2" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Finder web App</h3>
+                        <p class="text-slate-400 mb-4">
+                            Finder app using BookFinder and Pixabay APIs to search books with images..
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">Django</span>
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">API</span>
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">Bootstrap5</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://finder-sx5y.onrender.com/" class="text-primary hover:text-secondary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/Dimple7400/Finder.git" class="text-primary hover:text-secondary">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card rounded-xl overflow-hidden card-hover" data-aos="flip-up">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Images/shopxyz.png" 
+                             alt="Project 3" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">E-commerc Website</h3>
+                        <p class="text-slate-400 mb-4">
+                           Built a full-featured e-commerce platform with add-to-cart, wishlist, and so many.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">Next.js</span>
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">Chart.js</span>
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">TypeScript</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://shopxyz-4v6g.onrender.com/" class="text-primary hover:text-secondary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/Dimple7400/Shopxyz.git" class="text-primary hover:text-secondary">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="project-card rounded-xl overflow-hidden card-hover" data-aos="flip-up">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" 
+                             alt="Project 4" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Weather Application</h3>
+                        <p class="text-slate-400 mb-4">
+                            Real-time weather forecasting app with location detection.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">JavaScript</span>
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">API</span>
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">CSS3</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-primary hover:text-secondary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="text-primary hover:text-secondary">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="project-card rounded-xl overflow-hidden card-hover" data-aos="flip-up">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Images/portfolio.png" 
+                             alt="Project 5" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
+                        <p class="text-slate-400 mb-4">
+                            A responsive portfolio website built with modern design principles.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">HTML5</span>
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">CSS3</span>
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">JavaScript</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://dimple7400.github.io/Portfolio/" class="text-primary hover:text-secondary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/Dimple7400/Portfolio.git" class="text-primary hover:text-secondary">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="project-card rounded-xl overflow-hidden card-hover" data-aos="flip-up">
+                    <div class="h-48 overflow-hidden">
+                        <img src="Images/todo.webp" 
+                             alt="Project 6" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">To-do list</h3>
+                        <p class="text-slate-400 mb-4">
+                            Built a real-time to-do list app with regular updates and task tracking.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">HTML5</span>
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">CSS3</span>
+                            <span class="px-3 py-1 bg-slate-700 rounded-full text-sm">JavaScript</span>
+                        </div>
+                        <div class="flex space-x-3">
+                            <a href="https://dimple7400.github.io/To-do-list/" target="_blank" class="text-primary hover:text-secondary">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/Dimple7400/To-do-list.git" class="text-primary hover:text-secondary">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="px-8 py-3 rounded-full btn-primary font-medium inline-flex items-center" data-aos="fade-bottom">
+                    View All Projects <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" >Get In <span class="gradient-text" >Touch</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold mb-6" data-aos="fade-bottom">Contact Information</h3>
+                    <p class="text-slate-400 mb-8" data-aos="fade-bottom">
+                        Feel free to reach out to me for any questions or opportunities. 
+                        I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-slate-800 p-3 rounded-full mr-4" data-aos="fade-bottom">
+                                <i class="fas fa-map-marker-alt text-primary text-xl" data-aos="fade-bottom"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1" data-aos="fade-bottom">Location</h4>
+                                <p class="text-slate-400" data-aos="fade-bottom">Indore, (M.P.)</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-slate-800 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-primary text-xl" data-aos="fade-bottom"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1" data-aos="fade-bottom">Email</h4>
+                                <p class="text-slate-400" data-aos="fade-bottom">dimplefalak621@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-slate-800 p-3 rounded-full mr-4" data-aos="fade-bottom">
+                                <i class="fas fa-phone-alt text-primary text-xl" data-aos="fade-bottom"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1" data-aos="fade-bottom">Phone</h4>
+                                <p class="text-slate-400" data-aos="fade-bottom">+91 7400904711</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold mb-4" data-aos="fade-bottom">Follow Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://github.com/Dimple7400/" taeget="_blank" data-aos="fade-bottom" class="social-icon w-12 h-12 flex items-center justify-center rounded-full bg-slate-800 hover:bg-primary">
+                                <i class="fab fa-github text-xl" data-aos="fade-bottom"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/dimple-falak-70b04b2a7/" data-aos="fade-bottom" taeget="_blank" class="social-icon w-12 h-12 flex items-center justify-center rounded-full bg-slate-800 hover:bg-blue-600">
+                                <i class="fab fa-linkedin-in text-xl" data-aos="fade-bottom"></i>
+                            </a>
+                            <a href="#" data-aos="fade-bottom"class="social-icon w-12 h-12 flex items-center justify-center rounded-full bg-slate-800 hover:bg-blue-400">
+                                <i class="fab fa-twitter text-xl" data-aos="fade-bottom"></i>
+                            </a>
+                            <a href="#" data-aos="fade-bottom" class="social-icon w-12 h-12 flex items-center justify-center rounded-full bg-slate-800 hover:bg-pink-600">
+                                <i class="fab fa-dribbble text-xl" data-aos="fade-bottom"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold mb-6" data-aos="fade-bottom">Send Me a Message</h3>
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" >
+                            <div>
+                                <label for="name" class="block mb-2 font-medium" data-aos="fade-bottom">Your Name</label>
+                                <input type="text" id="name" data-aos="fade-bottom" class="w-full px-4 py-3 rounded-lg contact-input focus:outline-none"  required>
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-2 font-medium" >Your Email</label>
+                                <input type="email" data-aos="fade-bottom" id="email" class="w-full px-4 py-3 rounded-lg contact-input focus:outline-none"  required>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" data-aos="fade-bottom" class="block mb-2 font-medium">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 rounded-lg contact-input focus:outline-none"  required>
+                        </div>
+                        <div>
+                            <label for="message" data-aos="fade-bottom" class="block mb-2 font-medium" >Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 rounded-lg contact-input focus:outline-none"  required></textarea>
+                        </div>
+                        <button type="submit" data-aos="fade-bottom"  class="px-8 py-3 rounded-full btn-primary font-medium w-full">
+                            Send Message <i class="fas fa-paper-plane ml-2" data-aos="fade-bottom"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-darker py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold gradient-text" >Portfolio</a>
+                    <p class="text-slate-400 mt-2" >© 2025 Dimple Falak. All rights reserved.</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#"  class="text-slate-400 hover:text-primary transition">
+                        <i class="fab fa-github text-xl" ></i>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-blue-600 transition">
+                        <i class="fab fa-linkedin-in text-xl" ></i>
+                    </a>
+                    <a href="#"  class="text-slate-400 hover:text-blue-400 transition">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-pink-600 transition">
+                        <i class="fab fa-dribbble text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 mt-8 pt-8 text-center text-slate-500" >
+                <p>Made with <i class="fas fa-heart text-red-500"></i> and lots of <i class="fas fa-coffee text-amber-500"></i></p>
+            </div>
+        </div>
+    </footer>
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white shadow-lg hidden">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script src="main.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
